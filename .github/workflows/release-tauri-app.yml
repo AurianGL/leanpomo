@@ -53,6 +53,8 @@ jobs:
         with:
           node-version: 16.2.0
       - name: get version
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         run: echo ::set-env name=PACKAGE_VERSION::$(node -p "require('./package.json').version")
       - name: create release
         id: create_tauri_release
