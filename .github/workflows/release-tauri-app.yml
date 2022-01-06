@@ -1,11 +1,6 @@
 name: release-tauri-app
 
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - '**/package.json'
+on: [workflow:dispatch]
 
 jobs:
   check-build:
