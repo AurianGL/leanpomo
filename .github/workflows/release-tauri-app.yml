@@ -1,6 +1,17 @@
 name: release-tauri-app
 
-on: [workflow:dispatch]
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        default: '0.0.0'
+        description: 'The version to release'
+        required: true
+  push:
+    branches:
+      - master
+    paths:
+      - '**/package.json'
 
 jobs:
   check-build:
