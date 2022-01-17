@@ -81,11 +81,11 @@ jobs:
           - platform: ubuntu-latest
             buildFolder: bundle/deb
             ext: _0.1.0_amd64.deb
-            compressed: 'comp'
+            compressed: ''
           - platform: macos-latest
             buildFolder: bundle/osx
             ext: .app
-            compressed: .tgz
+            ressed: .tgz
           - platform: windows-latest
             buildFolder: 'build'
             ext: .x64.msi
