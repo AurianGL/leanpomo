@@ -76,20 +76,20 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [ubuntu-latest, windows-latest]
+        platform: [ubuntu-latest, macos-latest, windows-latest]
         include:
           - platform: ubuntu-latest
             buildFolder: bundle/deb
             ext: _0.1.0_amd64.deb
-            compressed: ''
+            compressed: 'comp'
           - platform: macos-latest
             buildFolder: bundle/osx
             ext: .app
             compressed: .tgz
           - platform: windows-latest
-            buildFolder: ''
+            buildFolder: 'build'
             ext: .x64.msi
-            compressed: ''
+            compressed: 'comp'
 
     steps:
       - uses: actions/checkout@v2
